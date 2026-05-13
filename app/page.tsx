@@ -1,11 +1,17 @@
-import AppIcon from "@/components/AppIcon";
-import GooglePlayBadge from "@/components/GooglePlayBadge";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <section className="hero">
       <div className="container">
-        <AppIcon />
+        <Image
+          src="/app-icon.png"
+          alt="DashPilot app icon"
+          width={128}
+          height={128}
+          className="hero-icon"
+          priority
+        />
 
         <h1>
           Turn your phone into
@@ -18,7 +24,20 @@ export default function Home() {
           phone. Choose the dashboard you like the most, and enjoy your ride.
         </p>
 
-        <GooglePlayBadge />
+        <a
+          href="https://play.google.com/store/apps/details?id=com.softwiredtech.dashpilot"
+          className="play-badge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/google-play-badge.png"
+            alt="Get it on Google Play"
+            width={200}
+            height={60}
+            priority
+          />
+        </a>
       </div>
     </section>
   );
