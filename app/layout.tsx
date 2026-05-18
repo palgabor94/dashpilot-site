@@ -1,9 +1,9 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import { Unbounded } from "next/font/google";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import "./globals.css";
 
 const unbounded = Unbounded({
@@ -16,10 +16,11 @@ const unbounded = Unbounded({
 export const metadata: Metadata = {
   title: "DashPilot — Turn your phone into a real-time car dashboard",
   description:
-    "Connect to your car through your Comma device, and get a real-time dashboard right on your phone.",
+    "subtitle",
   openGraph: {
-    title: "DashPilot",
-    description: "Turn your phone into a real-time car dashboard.",
+    title: "DashKit",
+    description:
+      "the DashKit + the DashPilot app — a live dashboard on your phone.",
     type: "website",
   },
 };

@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" className="brand">
               <Logo />
-              DashPilot
+              DashKit
             </Link>
             <p>Softwired Technologies Korlátolt Felelősségű Társaság</p>
           </div>

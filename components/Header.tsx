@@ -13,7 +13,7 @@ export default function Header() {
       <nav>
         <Link href="/" className="brand">
           <Logo />
-          DashPilot
+          DashKit
         </Link>
         <div className="nav-right">
           <div className="nav-links">
@@ -24,14 +24,9 @@ export default function Header() {
               Privacy Policy
             </Link>
           </div>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.softwiredtech.dashpilot"
-            className="nav-cta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Get the app
-          </a>
+          <Link href="/order" className="nav-cta">
+            Order DashKit
+          </Link>
         </div>
       </nav>
     </header>

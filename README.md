@@ -23,8 +23,26 @@ Marketing site for the DashPilot Android and iOS app. Built with Next.js 14 (App
 └── tsconfig.json
 ```
 
+## Environment variables
+
+Copy `.env.example` to `.env.local` and fill in:
+
+- `STRIPE_SECRET_KEY` — Stripe secret key (use `sk_test_...` locally). Server-side only.
+- `NEXT_PUBLIC_PRICE_EUR` — DashKit price in whole euros (placeholder: `149`).
+
+In production, set both in the Vercel project settings.
+
+## Stripe order flow
+
+- `/order` — order form (buyer info, harness type, shipping/billing address).
+- `POST /api/checkout` — creates a Stripe Checkout session (inline price, customer
+  data stored in session metadata) and returns the hosted checkout URL.
+- `/order/success` — shown after a successful payment.
+- `/order/cancelled` — shown if the payment is cancelled.
+
+Test card: `4242 4242 4242 4242`, any future expiry / CVC.
+
 ## Notes
 
-- Content (hero copy, footer info) is sourced directly from the Play Store listing.
-- The site is fully static — no API routes, no server-side data fetching.
+- The DashPilot app is linked from the hero (Google Play; iOS App Store coming later).
 - All external links to the Play Store open in a new tab.
